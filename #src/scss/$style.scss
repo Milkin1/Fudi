@@ -1,68 +1,349 @@
 //<МИКСИНЫ>===============================================================================================
 @import "mixins";
 
-//<ШРИФТЫ>===============================================================================================
-
-//<Подключаем шрифты>=======================================================================================
-
-
-//<Иконочные шрифты>==========================================================================================
-
-
 //<Шрифт по умолчанию>==========================================================================================
-$fontFamily: "Montserrat";
+$fontFamily: "Lato",
+sans-serif;
 
 //<ПЕРЕМЕННЫЕ>===========================================================================================================
 
 $minWidth: 320;
-$maxWidth: 1920;
+$maxWidth: 1600;
 $maxWidthContainer: 1184;
-$md1: $maxWidthContainer + 12;
-$md2: 991.98;
-$md3: 767.98;
-$md4: 479.98;
+// $md1: $maxWidthContainer+12;
+// $md2: 991.98;
+// $md3: 767.98;
+// $md4: 479.98;
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null";
+
 body {
-	color: #000;
-	font-size: 15px;
-	&._lock {
-		overflow: hidden;
-	}
+    color: #000;
+    font-size: 15px;
 }
+
+
 
 //<ОБОЛОЧКА>===========================================================================================================
 .wrapper {
-	width: 100%;
-	min-height: 100%;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
 .container {
-	max-width: $maxWidthContainer + px;
-	margin: 0 auto;
-	width: 100%;
-	padding: 0 20px;
-	@media (max-width: $md1+px) {
-		max-width: 970px;
-		padding: 0 20px;
-	}
-	@media (max-width: $md2+px) {
-		max-width: 750px;
-		padding: 0 20px;
-	}
-	@media (max-width: $md3+px) {
-		max-width: none;
-		padding: 0 20px;
-	}
+    min-width: $minWidth + px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+
+    @media (min-width: 1023px) {
+        max-width: 925px;
+        padding: 0 20px;
+    }
+
+    @media (min-width: 1439px) {
+        max-width: 1245px;
+        padding: 0 20px;
+    }
 }
 
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
-.page {
-	flex: 1 1 auto;
+
+// Burger menu====================================================
+.lock {
+    overflow: hidden;
+}
+
+.main__burger {
+    @include btn-reset;
+    display: block;
+    width: 14px;
+    height: 20px;
+    position: relative;
+    z-index: 3;
+}
+
+.main__burger span {
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 13px;
+    transition: all 0.3s ease 0s;
+}
+
+.main__burger:before,
+.main__burger:after {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.main__burger:before {
+    top: 8px;
+}
+
+.main__burger:after {
+    bottom: 0;
+}
+
+.main__burger.active span {
+    transform: scale(0);
+}
+
+.main__burger.active:before {
+    transform: rotate(45deg);
+    top: 9px;
+}
+
+.main__burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+}
+
+.main-navigation {
+    z-index: 2;
+    position: fixed;
+    max-width: 100%;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+    transition: all 0.3s ease 0s;
+    background-color: #000;
+    opacity: 0.9;
+    padding: 70px 10px 20px 10px;
+}
+
+.main-navigation.active {
+    right: 0;
+}
+
+.main-navigation__list {
+    display: block;
+    text-align: center;
+}
+
+.menu-item {
+    padding: 0 0 10px 0;
+}
+
+.main-navigation__list a {
+    font-weight: 800;
+    font-size: 20px;
+    color: #fff;
+}
+
+.menu-item {
+    font-size: 24px;
+}
+
+// Hero section===========================================================
+.hero {
+    margin: 0px 0px 120px 0px;
+
+    @media (min-width: 767px) {
+        margin: 0px 0px 344px 0px;
+    }
+
+    // .hero_bg
+    &__bg {
+        position: absolute;
+        z-index: -10;
+        width: 100%;
+        height: 442px;
+        object-fit: cover;
+
+        @media (min-width: 767px) {
+            height: 880px;
+        }
+    }
+
+    // .hero_subtitle
+    &_subtitle {
+        font-weight: 700;
+        font-size: 55px;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 0px 0px 20px 0px;
+        letter-spacing: 5px;
+
+        @media (min-width: 1439px) {
+            font-size: 100px;
+            margin: 0px 0px 30px 0px;
+        }
+
+    }
+
+    // .hero__block
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // .hero__title
+    &__title {
+        font-family: "Times New Roman", serif;
+        font-weight: 600;
+        font-style: italic;
+        font-size: 18px;
+        color: #ece6e0;
+        letter-spacing: 2px;
+        margin: 0px 0px 10px 0px;
+
+        @media (min-width: 1439px) {
+            font-size: 36px;
+            margin: 0 0 5px 21px
+        }
+    }
+
+    // .hero__btn
+    &__btn {
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        border: 3px solid #fff;
+        padding: 13px 30px;
+        margin: 0px 0px 40px 0px;
+
+        @media (min-width: 1439px) {
+            padding: 22px 80px;
+            font-size: 18px;
+        }
+    }
+
+    // .hero__text
+    &__text {
+        text-align: center;
+        color: #fff;
+        font-size: 10px;
+
+        @media (min-width: 1439px) {
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.main-nav-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px 80px 0px;
+
+    @media (min-width: 767px) {
+        margin: 21px 0 269px 0;
+    }
+
+    // .main-nav-block__logo
+    &__logo {
+        @media (min-width: 1439px) {
+            margin: 0 0 0 12px;
+        }
+    }
+
+    // .main-nav-block__links
+    &__links {
+        margin: 3px 12px 0px 0px;
+    }
+}
+
+// Section testimonials
+
+.testimonials {
+
+    // .testimonials__flex
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @media (min-width: 767px) {
+            flex-direction: row;
+            margin: 0px -25px;
+        }
+    }
+
+    // .testimonials__block
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1 1 33.333%;
+        margin: 0px 0px 30px 0px;
+
+        @media (min-width: 767px) {
+            padding: 0px 25px;
+            margin: 0px 0px 60px 0px;
+        }
+    }
+
+    // .testimonials__img
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #000;
+        border-radius: 100%;
+        width: 100px;
+        height: 100px;
+        margin: 0px 0px 18px 0px;
+
+        @media (min-width: 767px) {
+            margin: 0px 0px 20px 0px;
+        }
+
+        img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+    }
+
+    // .testimonials__title
+    &__title {
+        position: relative;
+        margin: 0px 0px 25px 0px;
+        font-size: 18px;
+        font-weight: 700;
+
+        @media (min-width: 767px) {
+            margin: 0px 0px 21px 0px;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 26px;
+            width: 70%;
+            height: 1px;
+            background-color: #f57365;
+        }
+    }
+
+    // .testimonials__text
+    &__text {
+        text-align: center;
+        max-width: 360px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 27px;
+        letter-spacing: 1px;
+    }
 }
