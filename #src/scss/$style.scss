@@ -150,7 +150,7 @@ body {
     font-size: 24px;
 }
 
-// Hero section===========================================================
+// Section hero ===========================================================
 .hero {
     margin: 0px 0px 120px 0px;
 
@@ -261,7 +261,7 @@ body {
     }
 }
 
-// Section testimonials
+// Section testimonials ====================================================
 
 .testimonials {
 
@@ -273,8 +273,15 @@ body {
         align-items: center;
 
         @media (min-width: 767px) {
+            margin: 50px -25px 0 -25px;
+        }
+
+        @media (min-width: 1023px) {
             flex-direction: row;
-            margin: 0px -25px;
+        }
+
+        @media (min-width: 1439px) {
+            margin: 0;
         }
     }
 
@@ -346,4 +353,54 @@ body {
         line-height: 27px;
         letter-spacing: 1px;
     }
+}
+
+// Section app ============================================================
+
+.app {
+
+    // .app__block
+    &__block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .app__phone
+    &__phone {}
+
+    // .app__img
+    &__img {
+        width: 100%;
+        height: 795px;
+        object-fit: contain;
+    }
+
+    // .app__phone-pic
+    &__phone-pic {
+        width: 100%;
+        height: 804px;
+        object-fit: contain;
+
+    }
+
+    // .app__intro
+    &__intro {}
+
+    // .app__title
+    &__title {}
+
+    // .app__text
+    &__text {}
+
+    // .app__icons
+    &__icons {}
+}
+
+.icons {
+
+    // .icons__applemarket
+    &__applemarket {}
+
+    // .icons__playmarket
+    &__playmarket {}
 }
