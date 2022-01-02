@@ -317,6 +317,10 @@ body {
   margin: 3px 12px 0px 0px;
 }
 
+.testimonials {
+  margin: 0px 0px 25px 0px;
+}
+
 .testimonials__flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -412,18 +416,72 @@ body {
           flex-direction: column;
 }
 
-.app__img {
-  width: 100%;
-  height: 795px;
-  -o-object-fit: contain;
-     object-fit: contain;
+.app__phone {
+  display: none;
 }
 
 .app__phone-pic {
   width: 100%;
-  height: 804px;
+  height: 424px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.app__intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  letter-spacing: 1px;
+}
+
+.app__title {
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  margin: 25px 0px 33px 0px;
+  position: relative;
+}
+
+.app__title:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 23px;
+  width: 90px;
+  height: 1px;
+  background-color: #f57365;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.app__text {
+  text-align: justify;
+  margin: 0px 0px 30px 0px;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.app__icons {
+  margin: 0px 0px 30px 0px;
+}
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.icons__applemarket {
+  padding: 0px 20px 0px 0px;
 }
 
 @media (min-width: 767px) {
@@ -455,6 +513,59 @@ body {
   .testimonials__title {
     margin: 0px 0px 21px 0px;
   }
+
+  .app {
+    padding: 0 30px;
+  }
+
+  .app__block {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .app__phone {
+    display: block;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .app__phone-pic {
+    height: 100%;
+    padding: 0px 40px 0px 0px;
+  }
+
+  .app__intro {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+  }
+
+  .app__title {
+    text-align: left;
+  }
+
+  .app__title:after {
+    left: 45px;
+  }
+
+  .app__text {
+    text-align: left;
+  }
+}
+
+@media (min-width: 887px) {
+  .app__intro {
+    padding: 161px 0 0 51px;
+  }
 }
 
 @media (min-width: 1023px) {
@@ -468,6 +579,23 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+
+  .app {
+    padding: 0px;
+  }
+
+  .app__phone-pic {
+    padding: 0px 50px 0px 0px;
+  }
+
+  .app__title {
+    font-size: 18px;
+  }
+
+  .app__text {
+    font-size: 16px;
+    line-height: 25px;
   }
 }
 
@@ -503,5 +631,9 @@ body {
 
   .testimonials__flex {
     margin: 0;
+  }
+
+  .app__phone-pic {
+    padding: 0px 100px 0px 0px;
   }
 }

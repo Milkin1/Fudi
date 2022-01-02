@@ -264,6 +264,7 @@ body {
 // Section testimonials ====================================================
 
 .testimonials {
+    margin: 0px 0px 25px 0px;
 
     // .testimonials__flex
     &__flex {
@@ -358,48 +359,137 @@ body {
 // Section app ============================================================
 
 .app {
+    @media (min-width: 767px) {
+        padding: 0 30px;
+    }
+
+    @media (min-width: 1023px) {
+        padding: 0px;
+    }
 
     // .app__block
     &__block {
         display: flex;
         flex-direction: column;
+
+        @media (min-width: 767px) {
+            flex-direction: row;
+        }
     }
 
     // .app__phone
-    &__phone {}
+    &__phone {
+        display: none;
 
-    // .app__img
-    &__img {
-        width: 100%;
-        height: 795px;
-        object-fit: contain;
+        @media (min-width: 767px) {
+            display: block;
+            flex: 1 1 50%;
+            order: 1;
+        }
     }
 
     // .app__phone-pic
     &__phone-pic {
         width: 100%;
-        height: 804px;
+        height: 424px;
         object-fit: contain;
 
+        @media (min-width: 767px) {
+            height: 100%;
+            padding: 0px 40px 0px 0px;
+        }
+
+        @media (min-width: 1023px) {
+            padding: 0px 50px 0px 0px;
+        }
+
+        @media (min-width: 1439px) {
+            padding: 0px 100px 0px 0px;
+        }
     }
 
     // .app__intro
-    &__intro {}
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        letter-spacing: 1px;
+
+        @media (min-width: 767px) {
+            order: 2;
+            flex: 1 1 50%;
+        }
+
+        @media (min-width: 887px) {
+            padding: 161px 0 0 51px;
+
+        }
+
+    }
 
     // .app__title
-    &__title {}
+    &__title {
+        font-weight: 700;
+        font-size: 15px;
+        text-align: center;
+        margin: 25px 0px 33px 0px;
+        position: relative;
+
+        @media (min-width: 767px) {
+            text-align: left;
+        }
+
+        @media (min-width: 1023px) {
+            font-size: 18px;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 23px;
+            width: 90px;
+            height: 1px;
+            background-color: #f57365;
+            transform: translateX(-50%);
+
+            @media (min-width: 767px) {
+                left: 45px;
+            }
+        }
+    }
 
     // .app__text
-    &__text {}
+    &__text {
+        text-align: justify;
+        margin: 0px 0px 30px 0px;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 22px;
+
+        @media (min-width: 767px) {
+            text-align: left;
+        }
+
+        @media (min-width: 1023px) {
+            font-size: 16px;
+            line-height: 25px;
+        }
+    }
 
     // .app__icons
-    &__icons {}
+    &__icons {
+        margin: 0px 0px 30px 0px;
+    }
 }
 
 .icons {
+    display: flex;
+    justify-content: flex-start;
 
     // .icons__applemarket
-    &__applemarket {}
+    &__applemarket {
+        padding: 0px 20px 0px 0px;
+    }
 
     // .icons__playmarket
     &__playmarket {}
