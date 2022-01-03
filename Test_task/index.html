@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/$style.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <title>Fudi</title>
 </head>
 
@@ -64,26 +65,74 @@
         <div class="app__block">
             <div class="app__intro">
                 <h2 class="app__title">INTRODUCING THE FUDI APP</h2>
-                <article class="app__text">
-                    <p>Morbi eget posuere dolor. Pellentesque cursus aliquet aliquet. Aeneanet felis sit amet diam mollis ullamcorper. Nullam consequat sem a ante vest ibulum tristique. Suspendisse tristique lacus ac mattis porta</p><br>
-                    <p>Vivamus ligula quam,
+                <article class="app__text text">
+                    <p class="text__p1">Morbi eget posuere dolor. Pellentesque cursus aliquet aliquet. Aeneanet felis sit amet diam mollis ullamcorper. Nullam consequat sem a ante vest ibulum tristique. Suspendisse tristique lacus ac mattis porta</p>
+                    <p class="text__p2">Vivamus ligula quam,
                         vehicula non lacinia sed,
                         faucibus sit amet libero. In libero dui,
                         eleifend eu nisi id,
                         egestas fringilla odio. In varius quam a mas sa hendrerit ullamcorper a eu justo. Suspendisse porta mattis convallis. Aenean tempus ligula ac odio rhoncus,
-                        quis aliquam dolor accumsan. </p><br>
-                    <p>Suspendisse aliquet felis consectetur libero congue,
+                        quis aliquam dolor accumsan. </p>
+                    <p class="text__p3">Suspendisse aliquet felis consectetur libero congue,
                         sed pulvinar diambr malesuada. Duis vehicula a nibh id hendrerit. Donec sit amet ultrices ante,
                         a mattis massa. </p>
                 </article>
-                <div class="app__icons icons">
-                    <a class="icons__applemarket" href="#"><img src="img/applemarket.jpg" alt=""></a>
-                    <a class="icons__playmarket" href="#"><img src="img/googlestore.jpg" alt=""></a>
+                <div class="app__icons icons"><a class="icons__applemarket" href="#"><img src="img/applemarket.jpg" alt=""></a><a class="icons__playmarket" href="#"><img src="img/googlestore.jpg" alt=""></a></div>
+            </div>
+            <div class="app__phone"><img class="app__phone-pic" src="img/iphone5s.png" alt="iphone5s"></div>
+        </div>
+    </div>
+</section>
+            <section class="feedback">
+    <div class="container">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="feedback__block swiper-slide">
+                    <div class="feedback__img-block">
+                        <picture>
+                            <source srcset="img/guy.webp" type="image/webp">
+                            <img src="img/guy.jpg" alt="feedbacks">
+                        </picture>
+                    </div>
+                    <p class="feedback__text">“I am so happy because I found this recipe, and it just made my life easier.
+                        Thanks so much for sharing!”
+                    </p>
+                    <div class="feedback__description">
+                        - Michael Dawson, San Francisco, CA -
+                    </div>
+                </div>
+
+                <div class="feedback__block swiper-slide">
+                    <div class="feedback__img-block">
+                        <picture>
+                            <source srcset="img/guy.webp" type="image/webp">
+                            <img src="img/guy.jpg" alt="feedbacks">
+                        </picture>
+                    </div>
+                    <p class="feedback__text">“I am so happy because I found this recipe, and it just made my life easier.
+                        Thanks so much for sharing!”
+                    </p>
+                    <div class="feedback__description">
+                        - Michael Dawson, San Francisco, CA -
+                    </div>
+                </div>
+
+                <div class="feedback__block swiper-slide">
+                    <div class="feedback__img-block">
+                        <picture>
+                            <source srcset="img/guy.webp" type="image/webp">
+                            <img src="img/guy.jpg" alt="feedbacks">
+                        </picture>
+                    </div>
+                    <p class="feedback__text">“I am so happy because I found this recipe, and it just made my life easier.
+                        Thanks so much for sharing!”
+                    </p>
+                    <div class="feedback__description">
+                        - Michael Dawson, San Francisco, CA -
+                    </div>
                 </div>
             </div>
-            <div class="app__phone">
-                <img class="app__phone-pic" src="img/iphone5s.png" alt="iphone5s">
-            </div>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
 </section>
@@ -91,7 +140,8 @@
         <footer></footer>
     </div>
 
-    <script src="js/main.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
 </body>
 
 </html>

@@ -106,7 +106,7 @@ function css_ignore() {
     return src(path.src.css_ignore, {
             allowEmpty: true
         })
-        .pipe(dest(path.build.css))
+        .pipe(dest(path.build.css));
 }
 
 function scripts() {
@@ -132,7 +132,7 @@ function scripts() {
 
 function js_ignore() {
     return src(path.src.js_ignore)
-        .pipe(dest(path.build.js))
+        .pipe(dest(path.build.js));
 }
 
 function images() {

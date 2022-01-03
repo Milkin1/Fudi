@@ -266,6 +266,10 @@ body {
 .testimonials {
     margin: 0px 0px 25px 0px;
 
+    @media (min-width: 1600px) {
+        margin: 0px 0px 120px 0px;
+    }
+
     // .testimonials__flex
     &__flex {
         display: flex;
@@ -396,7 +400,7 @@ body {
 
         @media (min-width: 767px) {
             height: 100%;
-            padding: 0px 40px 0px 0px;
+            padding: 0px 30px 0px 0px;
         }
 
         @media (min-width: 1023px) {
@@ -404,7 +408,7 @@ body {
         }
 
         @media (min-width: 1439px) {
-            padding: 0px 100px 0px 0px;
+            padding: 0px 66px 0px 14px;
         }
     }
 
@@ -413,6 +417,7 @@ body {
         display: flex;
         flex-direction: column;
         letter-spacing: 1px;
+        justify-content: center;
 
         @media (min-width: 767px) {
             order: 2;
@@ -420,10 +425,13 @@ body {
         }
 
         @media (min-width: 887px) {
-            padding: 161px 0 0 51px;
-
+            padding: 100px 0 0 0;
         }
 
+        @media (min-width: 1439px) {
+            padding: 77px 0 0 49px;
+            justify-content: start;
+        }
     }
 
     // .app__title
@@ -440,13 +448,18 @@ body {
 
         @media (min-width: 1023px) {
             font-size: 18px;
+            margin: 25px 0px 21px 0px;
+        }
+
+        @media (min-width: 1439px) {
+            margin: 14px 0px 21px 0px;
         }
 
         &:after {
             content: "";
             position: absolute;
             left: 50%;
-            top: 23px;
+            top: 26px;
             width: 90px;
             height: 1px;
             background-color: #f57365;
@@ -461,18 +474,23 @@ body {
     // .app__text
     &__text {
         text-align: justify;
-        margin: 0px 0px 30px 0px;
+        margin: 0px 0px 27px 0px;
         font-size: 13px;
         font-weight: 300;
         line-height: 22px;
 
         @media (min-width: 767px) {
             text-align: left;
+            margin: 0px 0px 15px 0px;
         }
 
         @media (min-width: 1023px) {
             font-size: 16px;
             line-height: 25px;
+        }
+
+        @media (min-width: 1439px) {
+            margin: 0px 0px 26px 0px;
         }
     }
 
@@ -482,15 +500,74 @@ body {
     }
 }
 
+.text {
+
+    // .text__p1
+    &__p1 {
+        margin: 0px 0px 5px 0px;
+
+        @media (min-width: 1439px) {
+            margin: 0px 0px 29px 0px;
+        }
+    }
+
+    // .text__p2
+    &__p2 {
+        margin: 0px 0px 5px 0px;
+    }
+
+    // .text__p3
+    &__p3 {}
+}
+
 .icons {
     display: flex;
     justify-content: flex-start;
 
     // .icons__applemarket
     &__applemarket {
-        padding: 0px 20px 0px 0px;
+        padding: 0px 12px 0px 0px;
     }
 
     // .icons__playmarket
     &__playmarket {}
+}
+
+// Section feedback ====================================================
+
+.feedback {
+    background: url('/img/feedback-bg.png') center no-repeat;
+    background-size: cover;
+
+    // .feedback__block
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // .feedback__img-block
+    &__img-block {
+        width: 100px;
+        height: 100px;
+        border: 5px solid #958b94;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 80px 0px 35px 0px;
+
+        img {
+            position: relative;
+            left: -27px;
+            top: -7px;
+        }
+    }
+
+    // .feedback__text
+    &__text {
+        text-align: center;
+        margin: 0px 0px 35px 0px;
+    }
+
+    // .feedback__description
+    &__description {}
 }

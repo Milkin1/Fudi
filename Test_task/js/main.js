@@ -1,4 +1,5 @@
-//burger menu
+// Burger menu =========================================
+
 const burger = document.querySelector('.main__burger'),
     navigation = document.querySelector('.main-navigation')
 
@@ -14,4 +15,19 @@ burger.addEventListener('click', (e) => {
         document.body.classList.add('lock');
     }
 
+});
+
+
+// Swiper ===============================================
+const swiper = document.querySelector('.swiper').swiper;
+
+swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
 });
