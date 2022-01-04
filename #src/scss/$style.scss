@@ -537,7 +537,7 @@ body {
 
 .feedback {
     background: url('/img/feedback-bg.png') center no-repeat;
-background-size: cover;
+    background-size: cover;
 
     // .feedback__block
     &__block {
@@ -553,7 +553,17 @@ background-size: cover;
         border: 5px solid #958b94;
         border-radius: 50%;
         overflow: hidden;
-        margin: 80px 0px 35px 0px;
+        margin: 30px 0px 35px 0px;
+
+        @media (min-width: 1023px) {
+            margin: 80px 0px 35px 0px;
+        }
+
+        @media (min-width: 1599px) {
+            margin: 80px 0px 35px 8px;
+            width: 111px;
+            height: 111px;
+        }
 
         img {
             position: relative;
@@ -566,8 +576,43 @@ background-size: cover;
     &__text {
         text-align: center;
         margin: 0px 0px 35px 0px;
+        padding: 0px 20px;
+        font-size: 20px;
+        font-weight: 300;
+        color: #b2adb2;
+
+        @media (min-width: 1023px) {
+            font-size: 30px;
+        }
     }
 
     // .feedback__description
-    &__description {}
+    &__description {
+        padding: 0px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        font-style: italic;
+        color: #b2adb2;
+
+        @media (min-width: 1023px) {
+            font-size: 18px;
+        }
+    }
+}
+
+.swiper {
+    width: inherit;
+    height: 320px;
+
+    @media (min-width: 1023px) {
+        height: 420px;
+    }
+}
+
+.swiper-pagination-bullet {
+    background: #7a6d79;
+}
+
+.swiper-pagination-bullet-active {
+    background: #fff;
 }

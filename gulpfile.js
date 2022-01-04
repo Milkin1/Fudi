@@ -103,9 +103,7 @@ function css() {
 }
 
 function css_ignore() {
-    return src(path.src.css_ignore, {
-            allowEmpty: true
-        })
+    return src(path.src.css_ignore)
         .pipe(dest(path.build.css));
 }
 
