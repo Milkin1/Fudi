@@ -19,9 +19,7 @@ burger.addEventListener('click', (e) => {
 
 
 // Swiper ===============================================
-const swiper = document.querySelector('.swiper').swiper;
-
-swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'vertical',
     loop: true,

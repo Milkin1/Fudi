@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/$style.min.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link href="css/$style.min.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper-bundle.min.css" rel="stylesheet" type="text/css">
     <title>Fudi</title>
 </head>
 
@@ -85,22 +85,8 @@
 </section>
             <section class="feedback">
     <div class="container">
-        <div class="swiper">
+        <div class="feedback-swiper swiper">
             <div class="swiper-wrapper">
-                <div class="feedback__block swiper-slide">
-                    <div class="feedback__img-block">
-                        <picture>
-                            <source srcset="img/guy.webp" type="image/webp">
-                            <img src="img/guy.jpg" alt="feedbacks">
-                        </picture>
-                    </div>
-                    <p class="feedback__text">“I am so happy because I found this recipe, and it just made my life easier.
-                        Thanks so much for sharing!”
-                    </p>
-                    <div class="feedback__description">
-                        - Michael Dawson, San Francisco, CA -
-                    </div>
-                </div>
 
                 <div class="feedback__block swiper-slide">
                     <div class="feedback__img-block">
@@ -131,17 +117,36 @@
                         - Michael Dawson, San Francisco, CA -
                     </div>
                 </div>
+
+                <div class="feedback__block swiper-slide">
+                    <div class="feedback__img-block">
+                        <picture>
+                            <source srcset="img/guy.webp" type="image/webp">
+                            <img src="img/guy.jpg" alt="feedbacks">
+                        </picture>
+                    </div>
+                    <p class="feedback__text">“I am so happy because I found this recipe, and it just made my life easier.
+                        Thanks so much for sharing!”
+                    </p>
+                    <div class="feedback__description">
+                        - Michael Dawson, San Francisco, CA -
+                    </div>
+                </div>
+
             </div>
+
             <div class="swiper-pagination"></div>
         </div>
+
+
     </div>
 </section>
         </main>
         <footer></footer>
     </div>
 
-    <script src="js/main.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
