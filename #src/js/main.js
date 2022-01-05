@@ -18,24 +18,24 @@ burger.addEventListener('click', (e) => {
 });
 
 
-// Swiper ===============================================
-// const swiper = new Swiper('.swiper', {
-//     // Optional parameters
-//     direction: 'horizontal',
-//     loop: true,
-//     slidesPerView: 1,
-//     autoplay: {
-//         delay: 3000,
-//     },
+///Swiper ===============================================
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+        delay: 3000,
+    },
 
-//     // If we need pagination
-//     pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true,
-//     },
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
 
-//     keyboard: {
-//         enabled: true,
-//         onlyInViewport: false,
-//     },
-// });
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+    },
+});

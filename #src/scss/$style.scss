@@ -255,11 +255,45 @@ body {
         }
     }
 
+    // .main-nav-block__flex
+    &__flex {
+        display: flex;
+        align-items: flex-end;
+        margin: 3px 0px 0px 0px;
+    }
+
     // .main-nav-block__links
     &__links {
-        margin: 3px 12px 0px 0px;
+        margin: 0px 12px 0px 0px;
+    }
+
+    // .main-nav-block__list-desktop
+    &__list-desktop {
+        display: none;
+
+        @media (min-width: 767px) {
+            display: flex;
+        }
+
     }
 }
+
+.list-desktop {
+
+    // .list-desktop__menu-item
+    &__menu-item {
+        a {
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #fff;
+            font-weight: 800;
+            margin: 0px 32px 0px 0px;
+        }
+    }
+}
+
+
+
 
 // Section testimonials ====================================================
 
@@ -365,6 +399,7 @@ body {
 .app {
     @media (min-width: 767px) {
         padding: 0 30px;
+
     }
 
     @media (min-width: 1023px) {
@@ -399,12 +434,15 @@ body {
         object-fit: contain;
 
         @media (min-width: 767px) {
-            height: 100%;
+            height: 497px;
+            width: 364px;
             padding: 0px 30px 0px 0px;
+            object-fit: cover;
         }
 
         @media (min-width: 1023px) {
             padding: 0px 50px 0px 0px;
+            width: 384px;
         }
 
         @media (min-width: 1439px) {
@@ -422,15 +460,15 @@ body {
         @media (min-width: 767px) {
             order: 2;
             flex: 1 1 50%;
+            margin: -10px 0px 0px 0px;
         }
 
-        @media (min-width: 887px) {
-            padding: 100px 0 0 0;
+        @media (min-width: 1023px) {
+            justify-content: flex-start;
         }
 
         @media (min-width: 1439px) {
             padding: 77px 0 0 49px;
-            justify-content: start;
         }
     }
 
@@ -495,9 +533,7 @@ body {
     }
 
     // .app__icons
-    &__icons {
-        margin: 0px 0px 30px 0px;
-    }
+    &__icons {}
 }
 
 .text {
@@ -560,7 +596,7 @@ body {
         }
 
         @media (min-width: 1599px) {
-            margin: 80px 0px 35px 8px;
+            margin: 80px 0px 16px 8px;
             width: 111px;
             height: 111px;
         }
@@ -575,14 +611,16 @@ body {
     // .feedback__text
     &__text {
         text-align: center;
-        margin: 0px 0px 35px 0px;
+        margin: 0px 0px 18px 0px;
         padding: 0px 20px;
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 300;
         color: #b2adb2;
+        line-height: 25px;
 
         @media (min-width: 1023px) {
             font-size: 30px;
+            line-height: 44px;
         }
     }
 
@@ -605,14 +643,32 @@ body {
     height: 320px;
 
     @media (min-width: 1023px) {
-        height: 420px;
+        height: 460px;
     }
+
 }
 
 .swiper-pagination-bullet {
     background: #7a6d79;
+    width: 10px;
+    height: 10px;
 }
 
 .swiper-pagination-bullet-active {
     background: #fff;
+    width: 10px;
+    height: 10px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets {
+    bottom: 18px;
+
+    @media (min-width: 767px) {
+        bottom: 30px;
+    }
+
+    @media (min-width: 1599px) {
+        bottom: 77px;
+    }
+
 }

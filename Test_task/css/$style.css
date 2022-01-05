@@ -313,8 +313,30 @@ body {
   margin: 20px 0px 80px 0px;
 }
 
+.main-nav-block__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 3px 0px 0px 0px;
+}
+
 .main-nav-block__links {
-  margin: 3px 12px 0px 0px;
+  margin: 0px 12px 0px 0px;
+}
+
+.main-nav-block__list-desktop {
+  display: none;
+}
+
+.list-desktop__menu-item a {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 800;
+  margin: 0px 32px 0px 0px;
 }
 
 .testimonials {
@@ -470,10 +492,6 @@ body {
   line-height: 22px;
 }
 
-.app__icons {
-  margin: 0px 0px 30px 0px;
-}
-
 .text__p1 {
   margin: 0px 0px 5px 0px;
 }
@@ -530,11 +548,12 @@ body {
 
 .feedback__text {
   text-align: center;
-  margin: 0px 0px 35px 0px;
+  margin: 0px 0px 18px 0px;
   padding: 0px 20px;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 300;
   color: #b2adb2;
+  line-height: 25px;
 }
 
 .feedback__description {
@@ -552,10 +571,18 @@ body {
 
 .swiper-pagination-bullet {
   background: #7a6d79;
+  width: 10px;
+  height: 10px;
 }
 
 .swiper-pagination-bullet-active {
   background: #fff;
+  width: 10px;
+  height: 10px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets {
+  bottom: 18px;
 }
 
 @media (min-width: 767px) {
@@ -569,6 +596,12 @@ body {
 
   .main-nav-block {
     margin: 21px 0 269px 0;
+  }
+
+  .main-nav-block__list-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .testimonials__flex {
@@ -610,8 +643,11 @@ body {
   }
 
   .app__phone-pic {
-    height: 100%;
+    height: 497px;
+    width: 364px;
     padding: 0px 30px 0px 0px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .app__intro {
@@ -621,6 +657,7 @@ body {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 50%;
             flex: 1 1 50%;
+    margin: -10px 0px 0px 0px;
   }
 
   .app__title {
@@ -635,11 +672,9 @@ body {
     text-align: left;
     margin: 0px 0px 15px 0px;
   }
-}
 
-@media (min-width: 887px) {
-  .app__intro {
-    padding: 100px 0 0 0;
+  .swiper-horizontal>.swiper-pagination-bullets {
+    bottom: 30px;
   }
 }
 
@@ -662,6 +697,13 @@ body {
 
   .app__phone-pic {
     padding: 0px 50px 0px 0px;
+    width: 384px;
+  }
+
+  .app__intro {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 
   .app__title {
@@ -680,6 +722,7 @@ body {
 
   .feedback__text {
     font-size: 30px;
+    line-height: 44px;
   }
 
   .feedback__description {
@@ -687,7 +730,7 @@ body {
   }
 
   .swiper {
-    height: 420px;
+    height: 460px;
   }
 }
 
@@ -731,9 +774,6 @@ body {
 
   .app__intro {
     padding: 77px 0 0 49px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
   }
 
   .app__title {
@@ -751,9 +791,13 @@ body {
 
 @media (min-width: 1599px) {
   .feedback__img-block {
-    margin: 80px 0px 35px 8px;
+    margin: 80px 0px 16px 8px;
     width: 111px;
     height: 111px;
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets {
+    bottom: 77px;
   }
 }
 
