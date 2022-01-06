@@ -6,51 +6,78 @@
     <div class="container">
         <div class="main-nav-block"><img class="main-nav-block__logo" src="img/logo.png" alt="logo">
             <div class="main-nav-block__flex">
-                <ul class="main-nav-block__list-desktop list-desktop">
-                    <li class="list-desktop__menu-item"><a href="#">Log in</a></li>
-                    <li class="list-desktop__menu-item"><a href="#">Sign up</a</li> </ul> <div class="main-nav-block__links"><button class="main__burger" type="button"><span></span></button>
-                            <nav class="main-navigation">
-                                <ul class="main-navigation__list">
-                                    <li class="menu-item"><a href="#">Log in</a></li>
-                                    <li class="menu-item"><a href="#">Sign up</a></li>
-                                </ul>
-                            </nav>
-            </div>
-        </div>
-    </div>
-    <div class="hero__block">
-        <p class="hero__title">Find your Favorite</p>
-        <h1 class="hero_subtitle">Recipes</h1><a class="hero__btn" href="#">GET STARTED</a>
-        <p class="hero__text">OR SEND US YOUR OWN RECIPES AND GET REWARDED !</p>
-    </div>
-    </div>
-</header>
+                <!-- Popup -->
+                <form class="main-nav-block__popup popup-btn">
 
+                    <!-- Log in popup -->
+                    <button class="main-nav-block__login popup-login" type="button">Log in</button>
+                    <div class="popup-login__body popup"><button data-popup-text="close" class="popup__area popup__close"></button>
+                        <div class="popup__body">
+                            <div class="popup__content popup-content">
+                                <button data-popup-text-x="close" class="popup__close">&#10006;
+                                </button>
+                                <img class="popup-content__logo" src="img/logo.png" alt="logo">
+                                <h3 class="popup-content__title">log-in</h3>
+                                <fieldset class="popup-content__form-group">
+                                    <span class="sr-only">Username or e-mail</span>
+                                    <input class="popup-content__input" type="text" name="" placeholder=" ">
+                                    <label class="popup-content__label">Username or e-mail</label>
+                                </fieldset>
+                                <fieldset class="popup-content__form-group">
+                                    <span class="sr-only">Password</span>
+                                    <input class="popup-content__input" type="text" name="" placeholder=" ">
+                                    <label class="popup-content__label">Password</label>
+                                </fieldset>
+                                <button class="popup-content__btn">log-in</button>
+                                <p class="popup-content__description">
+                                    don't have an account?<button type="button">log in</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Log in popup end -->
 
+                    <!-- Sign up popup -->
+                    <button class="main-nav-block__signup popup-signup" type="button">Sign up</button>
+                    <div class="popup-signup__body popup"><button data-popup-text="close" class="popup__area popup__close"></button>
+                        <div class="popup__body">
+                            <div class="popup__content">
+                                <button data-popup-text-x="close" class="popup__close">&#10006;</button>
+                                <h3 class="popup-content__title">sign-up</h3>
+                                <fieldset class="popup-content__form-group">
+                                    <span class="sr-only">Username or e-mail</span>
+                                    <input class="popup-content__input" type="text" name="" placeholder=" ">
+                                    <label class="popup-content__label">Username or e-mail</label>
+                                </fieldset>
+                                <fieldset class="popup-content__form-group">
+                                    <span class="sr-only">Password</span>
+                                    <input class="popup-content__input" type="text" name="" placeholder=" ">
+                                    <label class="popup-content__label">Password</label>
+                                </fieldset>
+                                <button class="popup-content__btn">sign-up</button>
+                                <p class="popup-content__description">
+                                    if you already have an account?<button type="button">sign-up</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sign up popup end -->
 
-
-<div class="quest-dropdown-content__popup-btn popup-btn">
-    <button data-btn-text_1="open" class="popup-btn__suit">Переглянути костюм</button>
-    <div class="popup popup-text">
-        <button data-popup-text="close" class="popup__area popup__close"></button>
-        <div class="popup__body">
-            <div class="popup__content">
-                <button data-popup-text-x="close" class="popup__close">&#10006;</button>
-                <p class="popup__text">.</p>
-            </div>
-        </div>
-    </div>
-
-    <button data-btn-image_1="open" class="popup-btn__actor">Додайте актора</button>
-    <div class="popup popup-image">
-        <button data-popup-image="close" class="popup__area popup__close"></button>
-        <div class="popup__body">
-            <div class="popup__content popup__content_image">
-                <button data-popup-image-x="close" class="popup__close">&#10006;</button>
-                <div class="popup__image">
-                    <img src="images/desktop/alice.jpg" alt="">
+                </form>
+                <div class="main-nav-block__links"><button class="main__burger" type="button"><span></span></button>
+                    <nav class="main-navigation">
+                        <ul class="main-navigation__list">
+                            <li class="menu-item"><a href="#">Log in</a></li>
+                            <li class="menu-item"><a href="#">Sign up</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
+        <div class="hero__block">
+            <p class="hero__title">Find your Favorite</p>
+            <h1 class="hero_subtitle">Recipes</h1><a class="hero__btn" href="#">GET STARTED</a>
+            <p class="hero__text">OR SEND US YOUR OWN RECIPES AND GET REWARDED !</p>
+        </div>
     </div>
-</div>
+</header>

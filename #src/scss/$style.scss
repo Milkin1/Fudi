@@ -267,30 +267,328 @@ body {
         margin: 0px 12px 0px 0px;
     }
 
-    // .main-nav-block__list-desktop
-    &__list-desktop {
-        display: none;
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+.popup {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.7s ease 0s;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.popup.open .popup__content {
+    transform: translate(0px, 0%);
+    opacity: 1;
+}
+
+.popup__area {
+    @include btn-reset();
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    transition: all 0.7s ease 0s;
+}
+
+.popup__content {
+    background-color: #fff;
+    color: #000;
+    max-width: 800px;
+    padding: 30px;
+    position: relative;
+    transition: all 0.7s ease 0s;
+    opacity: 0;
+    transform: translate(0px, -100%);
+}
+
+
+.popup__close {
+    @include btn-reset();
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+}
+
+.main-nav-block {
+
+    // .main-nav-block__popup
+    &__popup {
+        padding: 0;
+        border: none;
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
+
+        &::-moz-focus-outer {
+            border: 0;
+            padding: 0;
+        }
+
+        &::-moz-focus-inner {
+            border: 0;
+            padding: 0;
+        }
+    }
+
+    // .main-nav-block__signup
+    // .main-nav-block__login
+    &__login,
+    &__signup {
+        padding: 0;
+        border: none;
+        font: inherit;
+        color: inherit;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
+        margin: 0px 30px 0px 0px;
+        color: #fff;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 400;
+
+        &::-moz-focus-outer {
+            border: 0;
+            padding: 0;
+        }
+
+        &::-moz-focus-inner {
+            border: 0;
+            padding: 0;
+        }
+    }
+}
+
+.popup-btn {}
+
+.popup-login {
+
+    // .popup-login__body
+    &__body {}
+}
+
+.popup {
+
+    // .popup__area
+    &__area {}
+
+    // .popup__close
+    &__close {}
+
+    // .popup__body
+    &__body {}
+
+    // .popup__content
+    &__content {
+        background: rgb(150, 116, 92);
+        background: linear-gradient(0deg, #a7876f 0%, #381c4c 100%);
+    }
+}
+
+.open {}
+
+.popup-signup {
+
+    // .popup-signup__body
+    &__body {}
+}
+
+.popup-content {
+
+    // .popup-content__logo
+    &__logo {
+        display: block;
+        margin: 0 auto 30px auto;
+    }
+
+    // .popup-content__title
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #fff;
+        margin: 0px 0px 20px 0px;
 
         @media (min-width: 767px) {
-            display: flex;
+            font-size: 40px;
+        }
+    }
+
+    // .popup-content__form-group
+    &__form-group {
+        position: relative;
+        margin: 20px 0px 23px 0px;
+
+        @media (min-width: 767px) {
+            margin: 40px 0 50px 0;
+        }
+    }
+
+    // .popup-content__label
+    &__label {
+        white-space: nowrap;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        bottom: 5px;
+        color: #A8A2A2;
+        font-weight: 400;
+        font-size: 13px;
+        transition: all 0.3s ease 0s;
+
+        @media (min-width: 76px) {
+            bottom: 10px;
+            font-size: 20px;
+        }
+    }
+
+    // .popup-content__input
+    &__input {
+        width: 100%;
+        padding: 0px 0px 4px 0px;
+        border: none;
+        border-bottom: 2px solid #fff;
+        background-color: transparent;
+        outline: none;
+        transition: all 0.3s ease 0s;
+        color: #fff;
+
+        @media (min-width: 767px) {
+            width: 500px;
+            padding: 0 0 10px 0;
+            font-size: 22px;
         }
 
+        &:focus~.popup-content__label,
+        &:not(:placeholder-shown)~.popup-content__label {
+            font-size: 10px;
+            top: -15px;
+            color: #a499a3;
+
+            @media (min-width: 767px) {
+                font-size: 17px;
+            }
+        }
     }
-}
 
-.list-desktop {
+    // .popup-content__btn
+    &__btn {
+        border: none;
+        font: inherit;
+        cursor: pointer;
+        text-transform: uppercase;
+        display: block;
+        margin: 0 auto 20px auto;
+        font-size: 17px;
+        background: #751045;
+        color: #fff;
+        padding: 10px 30px;
+        border-radius: 3px;
+        outline: 1px solid #673353;
 
-    // .list-desktop__menu-item
-    &__menu-item {
-        a {
-            text-transform: uppercase;
+        @media (min-width: 767px) {
+            margin: 0 auto 30px auto;
+        }
+
+        &::-moz-focus-outer {
+            border: 0;
+            padding: 0;
+        }
+
+        &::-moz-focus-inner {
+            border: 0;
+            padding: 0;
+        }
+    }
+
+    // .popup-content__description
+    &__description {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+
+        @media (min-width: 767px) {
+            letter-spacing: 1px;
+        }
+
+        button {
+            padding: 0;
+            border: none;
+            font: inherit;
+            color: inherit;
+            background-color: transparent;
+            cursor: pointer;
+            outline: none;
             font-size: 14px;
-            color: #fff;
-            font-weight: 800;
-            margin: 0px 32px 0px 0px;
+            text-transform: uppercase;
+            padding: 0px 0px 0px 3px;
+            text-decoration: underline;
+
+            @media (min-width: 767px) {
+                letter-spacing: 1px;
+            }
+
+            &::-moz-focus-outer {
+                border: 0;
+                padding: 0;
+            }
+
+            &::-moz-focus-inner {
+                border: 0;
+                padding: 0;
+            }
         }
     }
 }
+
+.sr-only {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+
 
 
 
