@@ -899,15 +899,56 @@ body.lock {
 
 .cuisines__dynamic {
   margin: 0px auto 20px auto;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: 113px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  max-width: 1600px;
+}
+
+.cuisines__grid-element {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  max-width: 1600px;
+}
+
+.cuisines__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cuisines__recipes {
+  position: relative;
+  z-index: 1;
+  font-family: "Times New Roman",serif;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.cuisines__name {
+  position: relative;
+  z-index: 1;
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
 }
 
 .cuisines__title {
@@ -929,50 +970,6 @@ body.lock {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-}
-
-.cuisines__block {
-  position: relative;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-}
-
-.cuisines__img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  max-width: 320px;
-  min-width: 160px;
-  max-height: 225px;
-  min-height: 113px;
-  width: 100%;
-}
-
-.cuisines__recipes {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 14px;
-  font-weight: 700;
-  font-style: italic;
-  color: #fff;
-  text-transform: capitalize;
-  font-family: "Times New Roman",serif;
-}
-
-.cuisines__name {
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
 }
 
 .counter-block {
@@ -1048,20 +1045,6 @@ body.lock {
   .popup-content__label {
     bottom: 10px;
     font-size: 20px;
-  }
-}
-
-@media (min-width: 480px) {
-  .cuisines__block {
-    -ms-flex-preferred-size: 33.333%;
-        flex-basis: 33.333%;
-  }
-}
-
-@media (min-width: 640px) {
-  .cuisines__block {
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
   }
 }
 
@@ -1237,10 +1220,11 @@ body.lock {
   }
 }
 
-@media (min-width: 800px) {
-  .cuisines__block {
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
+@media (min-width: 959px) {
+  .cuisines__dynamic {
+    -ms-grid-columns: (1fr)[5];
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 225px;
   }
 }
 
