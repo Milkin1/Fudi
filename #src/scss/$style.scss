@@ -18,6 +18,7 @@ $maxWidthContainer: 1184;
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null";
 
+
 body {
     color: #000;
     font-size: 15px;
@@ -123,7 +124,7 @@ body {
     overflow: auto;
     transition: all 0.3s ease 0s;
     background-color: #000;
-    opacity: 0.9;
+    opacity: 1;
     padding: 70px 10px 20px 10px;
 }
 
@@ -180,6 +181,7 @@ body {
         text-transform: uppercase;
         margin: 0px 0px 20px 0px;
         letter-spacing: 5px;
+        text-align: center;
 
         @media (min-width: 1439px) {
             font-size: 100px;
@@ -204,6 +206,7 @@ body {
         color: #ece6e0;
         letter-spacing: 2px;
         margin: 0px 0px 10px 0px;
+        text-align: center;
 
         @media (min-width: 1439px) {
             font-size: 36px;
@@ -219,6 +222,7 @@ body {
         border: 3px solid #fff;
         padding: 13px 30px;
         margin: 0px 0px 40px 0px;
+        text-align: center;
 
         @media (min-width: 1439px) {
             padding: 22px 80px;
@@ -670,6 +674,7 @@ body.lock {
         margin: 0px 0px 25px 0px;
         font-size: 18px;
         font-weight: 700;
+        text-align: center;
 
         @media (min-width: 767px) {
             margin: 0px 0px 21px 0px;
@@ -757,7 +762,7 @@ body.lock {
             width: 413px;
         }
 
-        @media (min-width: 1600px) {
+        @media (min-width: 1439px) {
             height: 781px;
             width: 606px;
             margin: 13px 0px 0px 0px;
@@ -782,16 +787,18 @@ body.lock {
         }
 
         @media (min-width: 1439px) {
-            padding: 77px 0 0 49px;
+            padding: 90px 0 0 49px;
         }
     }
+
+
 
     // .app__title
     &__title {
         font-weight: 700;
         font-size: 15px;
         text-align: center;
-        margin: 25px 0px 33px 0px;
+        margin: 25px 0px 10px 0px;
         position: relative;
 
         @media (min-width: 767px) {
@@ -800,18 +807,22 @@ body.lock {
 
         @media (min-width: 1023px) {
             font-size: 18px;
-            margin: 25px 0px 21px 0px;
+            margin: 25px 0px 10px 0px;
         }
+    }
 
-        @media (min-width: 1439px) {
-            margin: 14px 0px 21px 0px;
+    // .app__border
+    &__border {
+        position: relative;
+        margin: 0px 0px 10px 0px;
+        @media (min-width: 767px) {
+            margin: 0px 0px 23px 0px;
         }
-
         &:after {
             content: "";
             position: absolute;
             left: 50%;
-            top: 26px;
+            top: 0;
             width: 90px;
             height: 1px;
             background-color: #f57365;
@@ -886,7 +897,7 @@ body.lock {
 // Section feedback ====================================================
 
 .feedback {
-    background: url('/img/feedback-bg.png') center no-repeat;
+    background: url('../img/feedback-bg.png') center no-repeat;
     background-size: cover;
     margin: 0px 0px 40px 0px;
 
@@ -1012,6 +1023,7 @@ body.lock {
         grid-auto-rows: 113px;
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         max-width: 1600px;
+        margin: 0 0 50px 0;
 
         @media (min-width: 959px) {
             grid-template-columns: repeat(5, 1fr);
@@ -1043,19 +1055,31 @@ body.lock {
         position: relative;
         z-index: 1;
         font-family: "Times New Roman", serif;
-        font-size: 15px;
+        font-size: 13px;
         color: #fff;
         font-weight: 700;
         font-style: italic;
+        text-transform: capitalize;
+        text-align: center;
+
+        @media (min-width: 767px) {
+            font-size: 15px;
+        }
     }
 
     // .cuisines__name
     &__name {
         position: relative;
         z-index: 1;
-        font-size: 36px;
+        font-size: 20px;
         font-weight: 700;
         color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+
+        @media (min-width: 767px) {
+            font-size: 25px;
+        }
     }
 
     // .cuisines__title

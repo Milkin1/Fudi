@@ -22,12 +22,12 @@
                                 <h3 class="popup-content__title">log-in</h3>
                                 <fieldset class="popup-content__form-group">
                                     <span class="sr-only">Username or e-mail</span>
-                                    <input class="popup-content__input" type="text" name="" placeholder=" ">
+                                    <input class="popup-content__input" type="text" name="login_username" placeholder=" ">
                                     <label class="popup-content__label">Username or e-mail</label>
                                 </fieldset>
                                 <fieldset class="popup-content__form-group">
                                     <span class="sr-only">Password</span>
-                                    <input class="popup-content__input" type="text" name="" placeholder=" ">
+                                    <input class="popup-content__input" type="text" name="login_password" placeholder=" ">
                                     <label class="popup-content__label">Password</label>
                                 </fieldset>
                                 <button class="popup-content__btn">log-in</button>
@@ -41,19 +41,21 @@
 
                     <!-- Sign up popup -->
                     <button class="main-nav-block__signup popup-signup" type="button">Sign up</button>
-                    <div class="popup-signup__body popup"><button data-popup-text="close" class="popup__area popup__close"></button>
+                    <div class="popup-signup__body popup">
+                        <button data-popup-text="close" class="popup__area popup__close"></button>
                         <div class="popup__body">
                             <div class="popup__content">
                                 <button data-popup-text-x="close" class="popup__close">&#10006;</button>
+                                <img class="popup-content__logo" src="img/logo.png" alt="logo">
                                 <h3 class="popup-content__title">sign-up</h3>
                                 <fieldset class="popup-content__form-group">
                                     <span class="sr-only">Username or e-mail</span>
-                                    <input class="popup-content__input" type="text" name="" placeholder=" ">
+                                    <input class="popup-content__input" type="text" name="login_username" placeholder=" ">
                                     <label class="popup-content__label">Username or e-mail</label>
                                 </fieldset>
                                 <fieldset class="popup-content__form-group">
                                     <span class="sr-only">Password</span>
-                                    <input class="popup-content__input" type="text" name="" placeholder=" ">
+                                    <input class="popup-content__input" type="text" name="login_password" placeholder=" ">
                                     <label class="popup-content__label">Password</label>
                                 </fieldset>
                                 <button class="popup-content__btn">sign-up</button>
@@ -70,8 +72,61 @@
                     <button class="main__burger" type="button"><span></span></button>
                     <nav class="main-navigation">
                         <ul class="main-navigation__list popup-btn">
-                            <li class="menu-item popup-login"><a class="popup-link" href="#">Log in</a></li>
-                            <li class="menu-item popup-signup"><a class="popup-link" href="#">Sign up</a></li>
+                            <li class="menu-item popup-login">
+                                <a class="popup-link popup-login" href="#">Log in</a>
+                                <div class="popup-login__body popup">
+                                    <button data-popup-text="close" class="popup__area popup__close"></button>
+                                    <div class="popup__body">
+                                        <div class="popup__content popup-content">
+                                            <button data-popup-text-x="close" class="popup__close">&#10006;
+                                            </button>
+                                            <img class="popup-content__logo" src="img/logo.png" alt="logo">
+                                            <h3 class="popup-content__title">log-in</h3>
+                                            <fieldset class="popup-content__form-group">
+                                                <span class="sr-only">Username or e-mail</span>
+                                                <input class="popup-content__input" type="text" name="login_username" placeholder=" ">
+                                                <label class="popup-content__label">Username or e-mail</label>
+                                            </fieldset>
+                                            <fieldset class="popup-content__form-group">
+                                                <span class="sr-only">Password</span>
+                                                <input class="popup-content__input" type="text" name="login_password" placeholder=" ">
+                                                <label class="popup-content__label">Password</label>
+                                            </fieldset>
+                                            <button class="popup-content__btn">log-in</button>
+                                            <p class="popup-content__description">
+                                                don't have an account?<button type="button">log in</button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu-item popup-signup">
+                                <a class="popup-link popup-signup" href="#">Sign up</a>
+                                <div class="popup-signup__body popup">
+                                    <button data-popup-text="close" class="popup__area popup__close"></button>
+                                    <div class="popup__body">
+                                        <div class="popup__content">
+                                            <button data-popup-text-x="close" class="popup__close">&#10006;</button>
+                                            <img class="popup-content__logo" src="img/logo.png" alt="logo">
+                                            <h3 class="popup-content__title">sign-up</h3>
+                                            <fieldset class="popup-content__form-group">
+                                                <span class="sr-only">Username or e-mail</span>
+                                                <input class="popup-content__input" type="text" name="login_username" placeholder=" ">
+                                                <label class="popup-content__label">Username or e-mail</label>
+                                            </fieldset>
+                                            <fieldset class="popup-content__form-group">
+                                                <span class="sr-only">Password</span>
+                                                <input class="popup-content__input" type="text" name="login_password" placeholder=" ">
+                                                <label class="popup-content__label">Password</label>
+                                            </fieldset>
+                                            <button class="popup-content__btn">sign-up</button>
+                                            <p class="popup-content__description">
+                                                if you already have an account?<button type="button">sign-up</button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
                     </nav>
                 </div>
