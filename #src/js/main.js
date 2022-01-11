@@ -31,41 +31,43 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
     });
     const noscroll = () => {
-        document.body.style.paddingRight = window.innerWidth - document.documentElement.clientWidth + 'px';
-        document.body.classList.add('lock');
+        const paddingLock = window.innerWidth - document.documentElement.clientWidth;
+        document.body.style.paddingRight = paddingLock + 'px';
         burger.style.zIndex = "2";
+        document.body.classList.add('lock');  
     }
-
     const scrollAgain = () => {
         document.body.classList.remove('lock');
         document.body.style.paddingRight = 0;
         burger.style.zIndex = "3";
     }
-
     popupParent.length && popupParent.forEach(parent => {
-            parent.addEventListener('click', (e) => {
-                    const close = parent.querySelectorAll('.popup__close');
-                    const logIn = parent.querySelector('.popup-login__body');
-                    const signUp = parent.querySelector('.popup-signup__body');
-                    // console.log(logIn);
-
-                    close.length && close.forEach(c => {
-                            c.addEventListener('click', () => {
-                                    logIn.classList.remove('open');
-                                    signUp.classList.remove('open');
-                                    scrollAgain()
-                                }
-
-                            )
-                        }
-
-                    );
-                    e.target.classList.contains('popup-login') && (logIn.classList.add('open'), noscroll());
-                    e.target.classList.contains('popup-signup') && (signUp.classList.add('open'), noscroll());
-                }
-
-            )
+        const close = parent.querySelectorAll('.popup__close');
+        const logIn = parent.querySelector('.popup-login__body');
+        const signUp = parent.querySelector('.popup-signup__body');
+        function closePopup(){
+            logIn.classList.remove('open');
+            signUp.classList.remove('open');
+            scrollAgain();
         }
+
+        parent.addEventListener('click', (e) => {
+            close.length && close.forEach(c => {
+                c.addEventListener('click', () => {
+                    closePopup();
+                });
+            });
+
+            e.target.classList.contains('popup-login') && (logIn.classList.add('open'), noscroll());
+            e.target.classList.contains('popup-signup') && (signUp.classList.add('open'), noscroll());
+        });
+
+        parent.addEventListener('keydown', (e) => {
+                if(e.code === 'Escape'){
+                    closePopup();
+                }
+            });
+    }
 
     ) // Swiper ==============================================
     const swiper = new Swiper('.swiper', {
