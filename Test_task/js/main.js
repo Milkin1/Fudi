@@ -110,15 +110,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         entries.forEach(entrie => {
                 cuisinesBlock.insertAdjacentHTML('afterbegin',
-                    `<div class="cuisines__grid-element">
-                <picture>
-                    <source srcset="img/cuisines/${entrie[0]}.webp" type="image/webp" media="(min-width: 767px)">
-                    <source srcset="img/cuisines/${entrie[0]}-sm.webp" type="image/webp">
-                    <img class="cuisines__img" src="img/cuisines/${entrie[0]}.jpg" alt="${entrie[0]} cuisine">
-                </picture>
-                <span class="cuisines__recipes">${entrie[1]} recipes</span>
-                <h3 class="cuisines__name">${entrie[0]}</h3>
-            </div>`
+                    `<div class="cuisines__block">
+                    <picture>
+                        <source srcset="img/cuisines/${entrie[0]}.webp" type="image/webp">
+                        <img class="cuisines__img" src="img/cuisines/${entrie[0]}.jpg" alt="${entrie[0]} cuisine">
+                    </picture>
+                    <span class="cuisines__recipes">${entrie[1]} recipes</span>
+                    <h3 class="cuisines__name">${entrie[0]}</h3>
+                </div>`
                 );
             }
 

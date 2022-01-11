@@ -908,61 +908,56 @@ body.lock {
 
 .cuisines__dynamic {
   margin: 0px auto 20px auto;
-  display: -ms-grid;
-  display: grid;
-  grid-auto-rows: 113px;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  max-width: 1600px;
-  margin: 0 0 50px 0;
-}
-
-.cuisines__grid-element {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1600px;
+}
+
+.cuisines__block {
+  position: relative;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
 .cuisines__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
+  height: 169px;
 }
 
 .cuisines__recipes {
-  position: relative;
-  z-index: 1;
-  font-family: "Times New Roman",serif;
-  font-size: 13px;
-  color: #fff;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 14px;
   font-weight: 700;
   font-style: italic;
+  color: #fff;
   text-transform: capitalize;
-  text-align: center;
+  font-family: "Times New Roman",serif;
 }
 
 .cuisines__name {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .cuisines__title {
@@ -973,11 +968,16 @@ body.lock {
   margin: 0px 0px 20px 0px;
 }
 
-.cuisines__title:after {
+.cuisines__border {
+  position: relative;
+  margin: 0px 0px 10px 0px;
+}
+
+.cuisines__border:after {
   content: "";
   position: absolute;
   left: 50%;
-  top: 23px;
+  bottom: 14px;
   width: 88px;
   height: 1px;
   background-color: #f57365;
@@ -1059,6 +1059,24 @@ body.lock {
   .popup-content__label {
     bottom: 10px;
     font-size: 20px;
+  }
+}
+
+@media (min-width: 480px) {
+  .cuisines__block {
+    -ms-flex-preferred-size: 33.333%;
+        flex-basis: 33.333%;
+  }
+
+  .cuisines__img {
+    height: 140px;
+  }
+}
+
+@media (min-width: 640px) {
+  .cuisines__block {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
   }
 }
 
@@ -1204,20 +1222,16 @@ body.lock {
     margin: 0px 0px 60px 0px;
   }
 
-  .cuisines__recipes {
-    font-size: 15px;
-  }
-
-  .cuisines__name {
-    font-size: 25px;
-  }
-
   .cuisines__title {
     margin: 0px 0px 50px 0px;
   }
 
-  .cuisines__title:after {
-    top: 26px;
+  .cuisines__border {
+    margin: 0px 0px 23px 0px;
+  }
+
+  .cuisines__border:after {
+    bottom: 41px;
   }
 
   .counter-block__sub {
@@ -1246,11 +1260,10 @@ body.lock {
   }
 }
 
-@media (min-width: 959px) {
-  .cuisines__dynamic {
-    -ms-grid-columns: (1fr)[5];
-    grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: 225px;
+@media (min-width: 800px) {
+  .cuisines__block {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
   }
 }
 
@@ -1311,6 +1324,10 @@ body.lock {
 
   .swiper {
     height: 460px;
+  }
+
+  .cuisines__img {
+    height: 180px;
   }
 
   .counter-block__sub {
@@ -1375,6 +1392,10 @@ body.lock {
 
   .text__p1 {
     margin: 0px 0px 29px 0px;
+  }
+
+  .cuisines__img {
+    height: 225px;
   }
 }
 
