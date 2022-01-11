@@ -315,7 +315,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 20px 0px 80px 0px;
+  margin: -20px 0px 80px 0px;
+}
+
+.main-nav-block__logo {
+  width: 147px;
+  height: 136px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  right: 40px;
 }
 
 .main-nav-block__flex {
@@ -830,6 +839,20 @@ body.lock {
   padding: 0px 12px 0px 0px;
 }
 
+.icons__applemarket img {
+  width: 122px;
+  height: 39px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.icons__playmarket img {
+  width: 120px;
+  height: 39px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .feedback {
   background: url("../img/feedback-bg.png") center no-repeat;
   background-size: cover;
@@ -908,7 +931,7 @@ body.lock {
 }
 
 .cuisines__dynamic {
-  margin: 0px auto 20px auto;
+  margin: 0px auto 55px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1019,6 +1042,7 @@ body.lock {
 .footer {
   background-color: #f7f7f7;
   border-top: 1px solid #b5b5b5;
+  margin: -25px 0px 0px 0px;
 }
 
 .footer__flex {
@@ -1091,7 +1115,11 @@ body.lock {
   }
 
   .main-nav-block {
-    margin: 21px 0 269px 0;
+    margin: -20px 0 232px 0;
+  }
+
+  .main-nav-block__logo {
+    right: 20px;
   }
 
   .main-nav-block__popup {
@@ -1199,7 +1227,7 @@ body.lock {
   }
 
   .app__border {
-    margin: 0px 0px 23px 0px;
+    margin: 0px 0px 12px 0px;
   }
 
   .app__border:after {
@@ -1224,7 +1252,7 @@ body.lock {
   }
 
   .cuisines__title {
-    margin: 0px 0px 50px 0px;
+    margin: 0px 0px 45px 0px;
   }
 
   .cuisines__border {
@@ -1243,7 +1271,7 @@ body.lock {
 
   .counter-block__item {
     font-size: 36px;
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 10px 0px;
   }
 
   .footer__rights {
@@ -1298,7 +1326,7 @@ body.lock {
 
   .app__title {
     font-size: 18px;
-    margin: 25px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
   }
 
   .app__text {
@@ -1365,7 +1393,7 @@ body.lock {
   }
 
   .main-nav-block__logo {
-    margin: 0 0 0 12px;
+    margin: 0 0 0 -8px;
   }
 
   .testimonials__flex {

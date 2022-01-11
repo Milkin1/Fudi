@@ -248,16 +248,24 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 0px 80px 0px;
+    margin: -20px 0px 80px 0px;
 
     @media (min-width: 767px) {
-        margin: 21px 0 269px 0;
+        margin: -20px 0 232px 0;
     }
 
     // .main-nav-block__logo
     &__logo {
+        width: 147px;
+        height: 136px;
+        object-fit: cover;
+        position: relative;
+        right: 40px;
+        @media (min-width: 767px) {
+            right: 20px;
+        }
         @media (min-width: 1439px) {
-            margin: 0 0 0 12px;
+            margin: 0 0 0 -8px;
         }
     }
 
@@ -808,7 +816,7 @@ body.lock {
 
         @media (min-width: 1023px) {
             font-size: 18px;
-            margin: 25px 0px 10px 0px;
+            margin: 10px 0px 10px 0px;
         }
     }
 
@@ -817,7 +825,7 @@ body.lock {
         position: relative;
         margin: 0px 0px 10px 0px;
         @media (min-width: 767px) {
-            margin: 0px 0px 23px 0px;
+            margin: 0px 0px 12px 0px;
         }
         &:after {
             content: "";
@@ -889,10 +897,22 @@ body.lock {
     // .icons__applemarket
     &__applemarket {
         padding: 0px 12px 0px 0px;
+        img{
+            width: 122px;
+            height: 39px;
+            object-fit: contain;
+        }
     }
 
     // .icons__playmarket
-    &__playmarket {}
+    &__playmarket {
+        img{
+            width: 120px;
+            height: 39px;
+            object-fit: contain;
+    }
+        }
+        
 }
 
 // Section feedback ====================================================
@@ -1018,7 +1038,7 @@ body.lock {
     }
     // cuisines__dynamic
     &__dynamic {
-        margin: 0px auto 20px auto;
+        margin: 0px auto 55px auto;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -1094,7 +1114,7 @@ body.lock {
         margin: 0px 0px 20px 0px;
 
         @media (min-width: 767px) {
-            margin: 0px 0px 50px 0px;
+            margin: 0px 0px 45px 0px;
         }
     }
 
@@ -1155,7 +1175,7 @@ body.lock {
 
         @media (min-width: 767px) {
             font-size: 36px;
-            margin: 0px 0px 20px 0px;
+            margin: 0px 0px 10px 0px;
         }
     }
 }
@@ -1166,6 +1186,7 @@ body.lock {
 .footer {
     background-color: #f7f7f7;
     border-top: 1px solid #b5b5b5;
+    margin: -25px 0px 0px 0px;
 
     // .footer__flex
     &__flex {
