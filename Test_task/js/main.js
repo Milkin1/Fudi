@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cuisinesBlock.insertAdjacentHTML('afterbegin',
                 `<div class="cuisines__block">
                 <picture>
-                    
+                    <source srcset="img/cuisines/${entrie[0]}.webp" type=image/webp>
                     <img class="cuisines__img" src="img/cuisines/${entrie[0]}.jpg" alt="${entrie[0]} cuisine">
                 </picture>
                 <span class="cuisines__recipes">${entrie[1]} recipes</span>
