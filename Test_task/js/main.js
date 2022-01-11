@@ -33,11 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const noscroll = () => {
         document.body.style.paddingRight = window.innerWidth - document.documentElement.clientWidth + 'px';
         document.body.classList.add('lock');
+        burger.style.zIndex = "2";
     }
 
     const scrollAgain = () => {
         document.body.classList.remove('lock');
         document.body.style.paddingRight = 0;
+        burger.style.zIndex = "3";
     }
 
     popupParent.length && popupParent.forEach(parent => {
