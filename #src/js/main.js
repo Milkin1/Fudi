@@ -31,8 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
     });
     const noscroll = () => {
-        const paddingLock = window.innerWidth - document.documentElement.clientWidth;
-        document.body.style.paddingRight = paddingLock + 'px';
+        document.body.style.paddingRight = window.innerWidth - document.documentElement.clientWidth + 'px';
         burger.style.zIndex = "2";
         document.body.classList.add('lock');  
     }
@@ -109,6 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function makeSection() {
         const entries = Object.entries(cuisines);
         entries.sort((a, b) => b[1] - a[1]);
+
+        // от большего к меньшему
+        //entries.sort((a, b) => b[1] - a[1]);
 
         entries.forEach(entrie => {
                 cuisinesBlock.insertAdjacentHTML('afterbegin',

@@ -155,12 +155,13 @@ body {
 // Section hero ===========================================================
 .hero {
     margin: 0px 0px 120px 0px;
+    position: relative;
 
     @media (min-width: 767px) {
         margin: 0px 0px 344px 0px;
     }
 
-    // .hero_bg
+    // .hero__bg
     &__bg {
         position: absolute;
         z-index: -10;
@@ -174,7 +175,7 @@ body {
         }
     }
 
-    // .hero_subtitle
+    // .hero__subtitle
     &_subtitle {
         font-weight: 700;
         font-size: 55px;
@@ -390,7 +391,6 @@ body.lock {
         padding: 0;
         border: none;
         font: inherit;
-        color: inherit;
         background-color: transparent;
         cursor: pointer;
         outline: none;
@@ -565,18 +565,14 @@ body.lock {
             letter-spacing: 1px;
         }
 
-        button {
-            padding: 0;
-            border: none;
-            font: inherit;
-            color: inherit;
-            background-color: transparent;
+        a {
+            color: #fff;
             cursor: pointer;
-            outline: none;
             font-size: 14px;
             text-transform: uppercase;
             padding: 0px 0px 0px 3px;
             text-decoration: underline;
+            font-weight: 400;
 
             @media (min-width: 767px) {
                 letter-spacing: 1px;

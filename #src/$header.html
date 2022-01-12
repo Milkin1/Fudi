@@ -12,28 +12,28 @@
                 <form class="main-nav-block__popup popup-btn">
 
                     <!-- Log in popup -->
-                    <button class="main-nav-block__login popup-login" type="button">Log in</button>
+                    <button class="main-nav-block__login popup-login" type="button" aria-label="login-btn">Log in</button>
                     <div class="popup-login__body popup">
-                        <button data-popup-text="close" class="popup__area popup__close"></button>
+                        <button data-popup-text="close" class="popup__area popup__close" aria-label="close-area"></button>
                         <div class="popup__body">
                             <div class="popup__content popup-content">
-                                <button data-popup-text-x="close" class="popup__close">&#10006;
+                                <button data-popup-text-x="close" class="popup__close" aria-label="close-btn">&#10006;
                                 </button>
                                 <img class="popup-content__logo" src="img/logo.png" alt="main logo">
                                 <h3 class="popup-content__title">log-in</h3>
                                 <div class="popup-content__form-group">
                                     <span class="sr-only">Username or e-mail</span>
-                                    <input class="popup-content__input" type="text" name="login_username" placeholder=" ">
-                                    <label class="popup-content__label">Username or e-mail</label>
+                                    <input class="popup-content__input" id="login-username_bg" type="text" name="login_username" placeholder=" ">
+                                    <label class="popup-content__label" for="login-username_bg">Username or e-mail</label>
                                 </div>
                                 <div class="popup-content__form-group">
                                     <span class="sr-only">Password</span>
-                                    <input class="popup-content__input" type="text" name="login_password" placeholder=" ">
-                                    <label class="popup-content__label">Password</label>
+                                    <input class="popup-content__input" id="login-password_bg" type="text" name="login_password" placeholder=" ">
+                                    <label class="popup-content__label" for="login-password_bg">Password</label>
                                 </div>
-                                <button class="popup-content__btn">log-in</button>
+                                <button class="popup-content__btn" aria-label="login-btn">log-in</button>
                                 <p class="popup-content__description">
-                                    don't have an account?<button type="button">log in</button>
+                                    don't have an account?<a href="">log in</a>
                                 </p>
                             </div>
                         </div>
@@ -41,27 +41,27 @@
                     <!-- Log in popup end -->
 
                     <!-- Sign up popup -->
-                    <button class="main-nav-block__signup popup-signup" type="button">Sign up</button>
+                    <button class="main-nav-block__signup popup-signup" type="button" aria-label="signup-btn">Sign up</button>
                     <div class="popup-signup__body popup">
-                        <button data-popup-text="close" class="popup__area popup__close"></button>
+                        <button data-popup-text="close" class="popup__area popup__close" aria-label="close area"></button>
                         <div class="popup__body">
                             <div class="popup__content">
-                                <button data-popup-text-x="close" class="popup__close">&#10006;</button>
+                                <button data-popup-text-x="close" class="popup__close" aria-label="close-btn">&#10006;</button>
                                 <img class="popup-content__logo" src="img/logo.png" alt="main logo">
                                 <h3 class="popup-content__title">sign-up</h3>
                                 <div class="popup-content__form-group">
                                     <span class="sr-only">Username or e-mail</span>
-                                    <input class="popup-content__input" type="text" name="login_username" placeholder=" ">
-                                    <label class="popup-content__label">Username or e-mail</label>
+                                    <input class="popup-content__input" id="signup-username_bg" type="text" name="login_username" placeholder=" ">
+                                    <label class="popup-content__label" for="signup-username_bg">Username or e-mail</label>
                                 </div>
                                 <div class="popup-content__form-group">
                                     <span class="sr-only">Password</span>
-                                    <input class="popup-content__input" type="text" name="login_password" placeholder=" ">
-                                    <label class="popup-content__label">Password</label>
+                                    <input class="popup-content__input" id="signup-password_bg" type="text" name="login_password" placeholder=" ">
+                                    <label class="popup-content__label" for="signup-password_bg">Password</label>
                                 </div>
-                                <button class="popup-content__btn">sign-up</button>
+                                <button class="popup-content__btn" aria-label="signup-btn">sign-up</button>
                                 <p class="popup-content__description">
-                                    if you already have an account?<button type="button">sign-up</button>
+                                    if you already have an account?<a href="">sign-up</a>
                                 </p>
                             </div>
                         </div>
@@ -71,32 +71,32 @@
                 </form>
                 
                 <div class="main-nav-block__links">
-                    <button class="main__burger" type="button" value=""><span></span></button>
+                    <button class="main__burger" type="button" value="" aria-label="burger-btn"><span></span></button>
                     <nav class="main-navigation">
                         <ul class="main-navigation__list popup-btn">
                             <li class="menu-item popup-login">
                                 <a class="popup-link popup-login" href="#">Log in</a>
                                 <div class="popup-login__body popup">
-                                    <button data-popup-text="close" class="popup__area popup__close"></button>
+                                    <button data-popup-text="close" class="popup__area popup__close" aria-label="close-area"></button>
                                     <div class="popup__body">
                                         <div class="popup__content popup-content">
-                                            <button data-popup-text-x="close" class="popup__close">&#10006;
+                                            <button data-popup-text-x="close" class="popup__close" aria-label="close-btn">&#10006;
                                             </button>
                                             <img class="popup-content__logo" src="img/logo.png" alt="main logo">
                                             <h3 class="popup-content__title">log-in</h3>
                                             <div class="popup-content__form-group">
                                                 <span class="sr-only">Username or e-mail</span>
-                                                <input class="popup-content__input" type="text" name="login_username" placeholder=" ">
-                                                <label class="popup-content__label">Username or e-mail</label>
+                                                <input class="popup-content__input" id="login-username_sm" type="text" name="login_username" placeholder=" ">
+                                                <label class="popup-content__label" for="login-username_sm">Username or e-mail</label>
                                             </div>
                                             <div class="popup-content__form-group">
                                                 <span class="sr-only">Password</span>
-                                                <input class="popup-content__input" type="text" name="login_password" placeholder=" ">
-                                                <label class="popup-content__label">Password</label>
+                                                <input class="popup-content__input" id="login-password_sm" type="text" name="login_password" placeholder=" ">
+                                                <label class="popup-content__label" for="login-password_sm">Password</label>
                                             </div>
-                                            <button class="popup-content__btn">log-in</button>
+                                            <button class="popup-content__btn" aria-label="login-btn">log-in</button>
                                             <p class="popup-content__description">
-                                                don't have an account?<button type="button">log in</button>
+                                                don't have an account?<a href="">log in</a>
                                             </p>
                                         </div>
                                     </div>
@@ -105,25 +105,25 @@
                             <li class="menu-item popup-signup">
                                 <a class="popup-link popup-signup" href="#">Sign up</a>
                                 <div class="popup-signup__body popup">
-                                    <button data-popup-text="close" class="popup__area popup__close"></button>
+                                    <button data-popup-text="close" class="popup__area popup__close" aria-label="close-area"></button>
                                     <div class="popup__body">
                                         <div class="popup__content">
-                                            <button data-popup-text-x="close" class="popup__close">&#10006;</button>
+                                            <button data-popup-text-x="close" class="popup__close" aria-label="close-btn">&#10006;</button>
                                             <img class="popup-content__logo" src="img/logo.png" alt="main logo">
                                             <h3 class="popup-content__title">sign-up</h3>
                                             <div class="popup-content__form-group">
                                                 <span class="sr-only">Username or e-mail</span>
-                                                <input class="popup-content__input" type="text" name="login_username" placeholder=" ">
-                                                <label class="popup-content__label">Username or e-mail</label>
+                                                <input class="popup-content__input" id="signup-username_sm" type="text" name="login_username" placeholder=" ">
+                                                <label class="popup-content__label" for="signup-username_sm">Username or e-mail</label>
                                             </div>
                                             <div class="popup-content__form-group">
                                                 <span class="sr-only">Password</span>
-                                                <input class="popup-content__input" type="text" name="login_password" placeholder=" ">
-                                                <label class="popup-content__label">Password</label>
+                                                <input class="popup-content__input" id="signup-password_sm" type="text" name="login_password" placeholder=" ">
+                                                <label class="popup-content__label" for="signup-password_sm">Password</label>
                                             </div>
-                                            <button class="popup-content__btn">sign-up</button>
+                                            <button class="popup-content__btn" aria-label="signup-btn">sign-up</button>
                                             <p class="popup-content__description">
-                                                if you already have an account?<button type="button">sign-up</button>
+                                                if you already have an account?<a href="">sign-up</a>
                                             </p>
                                         </div>
                                     </div>

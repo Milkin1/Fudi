@@ -243,6 +243,7 @@ body {
 
 .hero {
   margin: 0px 0px 120px 0px;
+  position: relative;
 }
 
 .hero__bg {
@@ -494,7 +495,6 @@ body.lock {
   padding: 0;
   border: none;
   font: inherit;
-  color: inherit;
   background-color: transparent;
   cursor: pointer;
   outline: none;
@@ -620,26 +620,22 @@ body.lock {
   text-align: center;
 }
 
-.popup-content__description button {
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
+.popup-content__description a {
+  color: #fff;
   cursor: pointer;
-  outline: none;
   font-size: 14px;
   text-transform: uppercase;
   padding: 0px 0px 0px 3px;
   text-decoration: underline;
+  font-weight: 400;
 }
 
-.popup-content__description button::-moz-focus-outer {
+.popup-content__description a::-moz-focus-outer {
   border: 0;
   padding: 0;
 }
 
-.popup-content__description button::-moz-focus-inner {
+.popup-content__description a::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -1162,7 +1158,7 @@ body.lock {
     letter-spacing: 1px;
   }
 
-  .popup-content__description button {
+  .popup-content__description a {
     letter-spacing: 1px;
   }
 
