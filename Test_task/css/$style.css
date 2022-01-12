@@ -854,7 +854,7 @@ body.lock {
 }
 
 .feedback {
-  background: url("../img/feedback-bg.png") center no-repeat;
+  background: #000 url("../img/feedback-bg.png") center no-repeat;
   background-size: cover;
   margin: 0px 0px 40px 0px;
 }
@@ -947,6 +947,7 @@ body.lock {
   position: relative;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  background-color: #000;
 }
 
 .cuisines__img {
