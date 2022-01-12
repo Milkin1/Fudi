@@ -302,7 +302,7 @@ body {
 .hero__text {
   text-align: center;
   color: #fff;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .main-nav-block {
@@ -1389,8 +1389,8 @@ body.lock {
   }
 
   .hero__text {
-    font-size: 14px;
     letter-spacing: 1px;
+    font-weight: 700;
   }
 
   .main-nav-block__logo {

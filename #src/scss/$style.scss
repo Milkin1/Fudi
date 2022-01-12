@@ -235,11 +235,11 @@ body {
     &__text {
         text-align: center;
         color: #fff;
-        font-size: 10px;
+        font-size: 11px;
 
         @media (min-width: 1439px) {
-            font-size: 14px;
             letter-spacing: 1px;
+            font-weight: 700;
         }
     }
 }
