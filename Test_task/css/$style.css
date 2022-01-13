@@ -208,9 +208,9 @@ body {
   right: -100%;
   width: 100%;
   height: 100%;
-  -webkit-transition: all .3s ease 0s;
-  -o-transition: all .3s ease 0s;
-  transition: all .3s ease 0s;
+  -webkit-transition: all .5s ease 0s;
+  -o-transition: all .5s ease 0s;
+  transition: all .5s ease 0s;
   background-color: #000;
   opacity: 1;
   padding: 70px 10px 20px 10px;
@@ -225,20 +225,6 @@ body {
   text-align: center;
   position: relative;
   top: 25%;
-}
-
-.menu-item {
-  margin: 0 0 25px 0;
-}
-
-.main-navigation__list a {
-  font-weight: 800;
-  font-size: 35px;
-  color: #fff;
-}
-
-.menu-item {
-  font-size: 24px;
 }
 
 .hero {
@@ -291,19 +277,21 @@ body {
 }
 
 .hero__btn {
-  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
   color: #fff;
   text-transform: uppercase;
   border: 3px solid #fff;
   padding: 13px 30px;
-  margin: 0px 0px 40px 0px;
+  margin: 0px 0px 36px 0px;
   text-align: center;
 }
 
 .hero__text {
   text-align: center;
   color: #fff;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .main-nav-block {
@@ -522,6 +510,30 @@ body.lock {
   background: -webkit-gradient(linear, left bottom, left top, from(#a7876f), to(#381c4c));
   background: -o-linear-gradient(bottom, #a7876f 0%, #381c4c 100%);
   background: linear-gradient(0deg, #a7876f 0%, #381c4c 100%);
+}
+
+.menu-item_popup {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  font-weight: 800;
+  font-size: 35px;
+  color: #fff;
+  margin: 0px 0px 25px 0px;
+}
+
+.menu-item_popup::-moz-focus-outer {
+  border: 0;
+  padding: 0;
+}
+
+.menu-item_popup::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }
 
 .popup-content__logo {
@@ -814,6 +826,10 @@ body.lock {
   line-height: 22px;
 }
 
+.app__icons {
+  margin: 0px 0px 0px -5px;
+}
+
 .text__p1 {
   margin: 0px 0px 5px 0px;
 }
@@ -840,6 +856,10 @@ body.lock {
   height: 39px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.icons__playmarket {
+  margin: 0px 0px 0px -7px;
 }
 
 .icons__playmarket img {
@@ -871,7 +891,8 @@ body.lock {
 .feedback__img-block {
   width: 100px;
   height: 100px;
-  border: 5px solid #958b94;
+  -webkit-box-shadow: 0px 0px 0px 5px #958b94;
+          box-shadow: 0px 0px 0px 5px #958b94;
   border-radius: 50%;
   overflow: hidden;
   margin: 30px 0px 35px 0px;
@@ -879,8 +900,8 @@ body.lock {
 
 .feedback__img-block img {
   position: relative;
-  left: -27px;
-  top: -7px;
+  left: -26px;
+  top: -9px;
 }
 
 .feedback__text {
@@ -894,7 +915,7 @@ body.lock {
 }
 
 .feedback__description {
-  padding: 0px 20px;
+  margin: 0px 20px 34px 20px;
   font-size: 14px;
   font-weight: 600;
   font-style: italic;
@@ -903,7 +924,12 @@ body.lock {
 
 .swiper {
   width: inherit;
-  height: 320px;
+  min-height: 320px;
+}
+
+.swiper-pagination {
+  position: static;
+  margin: 0px 0px 18px 0px;
 }
 
 .swiper-pagination-bullet {
@@ -966,6 +992,7 @@ body.lock {
   color: #fff;
   text-transform: capitalize;
   font-family: "Times New Roman",serif;
+  margin: -20px 0px 0px 0px;
 }
 
 .cuisines__name {
@@ -986,7 +1013,7 @@ body.lock {
   text-align: center;
   font-size: 18px;
   font-weight: 700;
-  margin: 0px 0px 20px 0px;
+  margin: -2px 0px 20px 0px;
 }
 
 .cuisines__border {
@@ -1203,7 +1230,7 @@ body.lock {
 
   .app__phone-pic {
     height: 497px;
-    width: 364px;
+    width: 379px;
     padding: 0px 30px 0px 0px;
     -o-object-fit: cover;
        object-fit: cover;
@@ -1249,7 +1276,7 @@ body.lock {
   }
 
   .cuisines__title {
-    margin: 0px 0px 45px 0px;
+    margin: -2px 0px 49px 0px;
   }
 
   .cuisines__border {
@@ -1304,6 +1331,9 @@ body.lock {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 
   .app {
@@ -1312,7 +1342,7 @@ body.lock {
 
   .app__phone-pic {
     padding: 0px 50px 0px 0px;
-    width: 384px;
+    width: 400px;
   }
 
   .app__intro {
@@ -1336,7 +1366,7 @@ body.lock {
   }
 
   .feedback__img-block {
-    margin: 80px 0px 35px 0px;
+    margin: 85px 0px 35px 0px;
   }
 
   .feedback__text {
@@ -1349,11 +1379,16 @@ body.lock {
   }
 
   .swiper {
-    height: 460px;
+    min-height: 460px;
   }
 
   .cuisines__img {
     height: 180px;
+  }
+
+  .cuisines__name {
+    font-size: 25px;
+    margin: -35px 0px 0px 0px;
   }
 
   .counter-block__sub {
@@ -1398,14 +1433,10 @@ body.lock {
   }
 
   .app__phone-pic {
+    height: 777px;
+    width: 630px;
     padding: 0px 66px 0px 14px;
-    width: 413px;
-  }
-
-  .app__phone-pic {
-    height: 781px;
-    width: 606px;
-    margin: 13px 0px 0px 0px;
+    margin: 16px 0px 0px -27px;
   }
 
   .app__intro {
@@ -1413,7 +1444,7 @@ body.lock {
   }
 
   .app__text {
-    margin: 0px 0px 26px 0px;
+    margin: 0px 0px 30px 0px;
   }
 
   .text__p1 {
@@ -1423,13 +1454,15 @@ body.lock {
   .cuisines__img {
     height: 225px;
   }
+
+  .cuisines__name {
+    font-size: 40px;
+  }
 }
 
 @media (min-width: 1599px) {
   .feedback__img-block {
-    margin: 80px 0px 16px 8px;
-    width: 111px;
-    height: 111px;
+    margin: 85px 0px 38px 2px;
   }
 
   .swiper-horizontal>.swiper-pagination-bullets {
@@ -1440,5 +1473,9 @@ body.lock {
 @media (min-width: 1600px) {
   .testimonials {
     margin: 0px 0px 120px 0px;
+  }
+
+  .feedback__description {
+    margin: 0px 20px 34px 20px;
   }
 }

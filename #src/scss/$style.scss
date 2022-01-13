@@ -121,7 +121,7 @@ body {
     right: -100%;
     width: 100%;
     height: 100%;
-    transition: all 0.3s ease 0s;
+    transition: all 0.5s ease 0s;
     background-color: #000;
     opacity: 1;
     padding: 70px 10px 20px 10px;
@@ -136,20 +136,6 @@ body {
     text-align: center;
     position: relative;
     top: 25%;
-}
-
-.menu-item {
-    margin: 0 0 25px 0;
-}
-
-.main-navigation__list a {
-    font-weight: 800;
-    font-size: 35px;
-    color: #fff;
-}
-
-.menu-item {
-    font-size: 24px;
 }
 
 // Section hero ===========================================================
@@ -218,12 +204,14 @@ body {
 
     // .hero__btn
     &__btn {
-        text-decoration: none;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
         color: #fff;
         text-transform: uppercase;
         border: 3px solid #fff;
         padding: 13px 30px;
-        margin: 0px 0px 40px 0px;
+        margin: 0px 0px 36px 0px;
         text-align: center;
 
         @media (min-width: 1439px) {
@@ -236,7 +224,7 @@ body {
     &__text {
         text-align: center;
         color: #fff;
-        font-size: 11px;
+        font-size: 13px;
 
         @media (min-width: 1439px) {
             letter-spacing: 1px;
@@ -446,6 +434,28 @@ body.lock {
     &__body {}
 }
 
+.menu-item_popup{
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    &::-moz-focus-outer{
+        border: 0;
+        padding: 0;
+    }
+    &::-moz-focus-inner{
+        border: 0;
+        padding: 0;
+    }
+    font-weight: 800;
+    font-size: 35px;
+    color: #fff;
+    margin: 0px 0px 25px 0px;
+}
+
 .popup-content {
 
     // .popup-content__logo
@@ -623,6 +633,7 @@ body.lock {
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
+        
 
         @media (min-width: 767px) {
             margin: 50px -25px 0 -25px;
@@ -630,6 +641,7 @@ body.lock {
 
         @media (min-width: 1023px) {
             flex-direction: row;
+            align-items: flex-start;
         }
 
         @media (min-width: 1439px) {
@@ -752,25 +764,21 @@ body.lock {
 
         @media (min-width: 767px) {
             height: 497px;
-            width: 364px;
+            width: 379px;
             padding: 0px 30px 0px 0px;
             object-fit: cover;
         }
 
         @media (min-width: 1023px) {
             padding: 0px 50px 0px 0px;
-            width: 384px;
+            width: 400px;
         }
 
         @media (min-width: 1439px) {
+            height: 777px;
+            width: 630px;
             padding: 0px 66px 0px 14px;
-            width: 413px;
-        }
-
-        @media (min-width: 1439px) {
-            height: 781px;
-            width: 606px;
-            margin: 13px 0px 0px 0px;
+            margin: 16px 0px 0px -27px;
         }
     }
 
@@ -858,12 +866,14 @@ body.lock {
         }
 
         @media (min-width: 1439px) {
-            margin: 0px 0px 26px 0px;
+            margin: 0px 0px 30px 0px;
         }
     }
 
     // .app__icons
-    &__icons {}
+    &__icons {
+        margin: 0px 0px 0px -5px;
+    }
 }
 
 .text {
@@ -902,6 +912,7 @@ body.lock {
 
     // .icons__playmarket
     &__playmarket {
+        margin: 0px 0px 0px -7px;
         img{
             width: 120px;
             height: 39px;
@@ -937,25 +948,23 @@ body.lock {
     &__img-block {
         width: 100px;
         height: 100px;
-        border: 5px solid #958b94;
+        box-shadow: 0px 0px 0px 5px #958b94;
         border-radius: 50%;
         overflow: hidden;
         margin: 30px 0px 35px 0px;
 
         @media (min-width: 1023px) {
-            margin: 80px 0px 35px 0px;
+            margin: 85px 0px 35px 0px;
         }
 
         @media (min-width: 1599px) {
-            margin: 80px 0px 16px 8px;
-            width: 111px;
-            height: 111px;
+            margin: 85px 0px 38px 2px;
         }
 
         img {
             position: relative;
-            left: -27px;
-            top: -7px;
+            left: -26px;
+            top: -9px;
         }
     }
 
@@ -977,7 +986,7 @@ body.lock {
 
     // .feedback__description
     &__description {
-        padding: 0px 20px;
+        margin: 0px 20px 34px 20px;
         font-size: 14px;
         font-weight: 600;
         font-style: italic;
@@ -986,19 +995,27 @@ body.lock {
         @media (min-width: 1023px) {
             font-size: 18px;
         }
+        @media (min-width: 1600px) {
+            margin: 0px 20px 34px 20px;
+        }
     }
 }
 
+// Slider ---------------------------------------------
 .swiper {
     width: inherit;
-    height: 320px;
+    min-height: 320px;
 
     @media (min-width: 1023px) {
-        height: 460px;
+        min-height: 460px;
     }
 
 }
 
+.swiper-pagination{
+    position: static;
+    margin: 0px 0px 18px 0px;
+}
 .swiper-pagination-bullet {
     background: #7a6d79;
     width: 10px;
@@ -1088,6 +1105,10 @@ body.lock {
         color: #fff;
         text-transform: capitalize;
         font-family: "Times New Roman", serif;
+        margin: -20px 0px 0px 0px;
+        @media (min-width: 1439px) {
+            
+        }
     }
 
     // .cuisines__name
@@ -1100,6 +1121,16 @@ body.lock {
         font-size: 20px;
         font-weight: 700;
         text-transform: uppercase;
+
+        @media (min-width: 1023px) {
+            font-size: 25px;
+            margin: -35px 0px 0px 0px;
+        }
+        
+        @media (min-width: 1439px) {
+            font-size: 40px;
+            
+        }
     }
 
     // .cuisines__title
@@ -1108,10 +1139,10 @@ body.lock {
         text-align: center;
         font-size: 18px;
         font-weight: 700;
-        margin: 0px 0px 20px 0px;
+        margin: -2px 0px 20px 0px;
 
         @media (min-width: 767px) {
-            margin: 0px 0px 45px 0px;
+            margin: -2px 0px 49px 0px;
         }
     }
 

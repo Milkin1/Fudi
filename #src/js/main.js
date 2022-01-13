@@ -9,21 +9,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.currentTarget.classList.remove('active');
                 navigation.classList.remove('active');
                 document.body.classList.remove('lock');
-
             } else {
                 e.currentTarget.classList.add('active');
                 navigation.classList.add('active');
                 document.body.classList.add('lock');
             }
+    });
 
-        }
-
-    );
 
     // Popup ================================================
 
     const popupParent = document.querySelectorAll('.popup-btn');
     const popupLink = document.querySelector('.popup-link');
+
+    const burgerClose = () => {
+        if (burger.classList.contains('active')) {
+            burger.classList.remove('active');
+            navigation.classList.remove('active');
+            document.body.classList.remove('lock');
+        }
+    };
 
 
 
@@ -34,12 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.paddingRight = window.innerWidth - document.documentElement.clientWidth + 'px';
         burger.style.zIndex = "2";
         document.body.classList.add('lock');  
-    }
+    };
     const scrollAgain = () => {
         document.body.classList.remove('lock');
         document.body.style.paddingRight = 0;
         burger.style.zIndex = "3";
-    }
+    };
     popupParent.length && popupParent.forEach(parent => {
         const close = parent.querySelectorAll('.popup__close');
         const logIn = parent.querySelector('.popup-login__body');
@@ -47,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function closePopup(){
             logIn.classList.remove('open');
             signUp.classList.remove('open');
-            scrollAgain();
+            const closeTimer = setTimeout(scrollAgain, 700);
         }
 
         parent.addEventListener('click', (e) => {
@@ -57,8 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
 
-            e.target.classList.contains('popup-login') && (logIn.classList.add('open'), noscroll());
-            e.target.classList.contains('popup-signup') && (signUp.classList.add('open'), noscroll());
+            e.target.classList.contains('popup-login') && (logIn.classList.add('open'), burgerClose(), noscroll());
+            e.target.classList.contains('popup-signup') && (signUp.classList.add('open'), burgerClose(), noscroll());
         });
 
         parent.addEventListener('keydown', (e) => {
@@ -66,9 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     closePopup();
                 }
             });
-    }
-
-    ) // Swiper ==============================================
+    });
+    
+    // Swiper ==============================================
     const swiper = new Swiper('.swiper', {
 
         // Optional parameters
@@ -110,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.sort((a, b) => b[1] - a[1]);
 
         // от большего к меньшему
-        //entries.sort((a, b) => b[1] - a[1]);
+        //entries.sort((a, b) => a[1] - b[1]);
 
         entries.forEach(entrie => {
                 cuisinesBlock.insertAdjacentHTML('afterbegin',
