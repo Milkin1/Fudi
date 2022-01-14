@@ -228,8 +228,11 @@ body {
 }
 
 .hero {
-  margin: 0px 0px 120px 0px;
+  margin: 0px 0px 60px 0px;
   position: relative;
+  background-image: url("../img/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero__bg {
@@ -292,6 +295,7 @@ body {
   text-align: center;
   color: #fff;
   font-size: 13px;
+  margin: 0px 0px 40px 0px;
 }
 
 .main-nav-block {
@@ -536,6 +540,10 @@ body.lock {
   padding: 0;
 }
 
+.popup-content {
+  width: 290px;
+}
+
 .popup-content__logo {
   display: block;
   margin: 0 auto 30px auto;
@@ -731,17 +739,22 @@ body.lock {
   text-align: center;
 }
 
-.testimonials__title:after {
+.testimonials__border {
+  position: relative;
+  margin: 0px 0px 10px 0px;
+}
+
+.testimonials__border:after {
   content: "";
   position: absolute;
   left: 50%;
+  top: -17px;
+  width: 83px;
+  height: 1px;
+  background-color: #f57365;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  top: 26px;
-  width: 70%;
-  height: 1px;
-  background-color: #f57365;
 }
 
 .testimonials__text {
@@ -1130,10 +1143,6 @@ body.lock {
 }
 
 @media (min-width: 767px) {
-  .hero {
-    margin: 0px 0px 344px 0px;
-  }
-
   .hero__bg {
     height: 880px;
   }
@@ -1148,6 +1157,10 @@ body.lock {
 
   .main-nav-block__popup {
     display: block;
+  }
+
+  .popup-content {
+    width: 560px;
   }
 
   .popup-content__title {
@@ -1204,6 +1217,14 @@ body.lock {
 
   .testimonials__title {
     margin: 0px 0px 21px 0px;
+  }
+
+  .testimonials__border {
+    margin: 0px 0px 12px 0px;
+  }
+
+  .testimonials__border:after {
+    top: -13px;
   }
 
   .app {

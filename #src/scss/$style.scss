@@ -140,12 +140,11 @@ body {
 
 // Section hero ===========================================================
 .hero {
-    margin: 0px 0px 120px 0px;
+    margin: 0px 0px 60px 0px;
     position: relative;
-
-    @media (min-width: 767px) {
-        margin: 0px 0px 344px 0px;
-    }
+    background-image: url('../img/hero.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
 
     // .hero__bg
     &__bg {
@@ -225,6 +224,7 @@ body {
         text-align: center;
         color: #fff;
         font-size: 13px;
+        margin: 0px 0px 40px 0px;
 
         @media (min-width: 1439px) {
             letter-spacing: 1px;
@@ -457,6 +457,10 @@ body.lock {
 }
 
 .popup-content {
+    width: 290px;
+    @media (min-width: 767px) {
+        width: 560px;
+    }
 
     // .popup-content__logo
     &__logo {
@@ -696,16 +700,28 @@ body.lock {
         @media (min-width: 767px) {
             margin: 0px 0px 21px 0px;
         }
+    }
 
+    // .testimonials__border
+    &__border {
+        position: relative;
+        margin: 0px 0px 10px 0px;
+        @media (min-width: 767px) {
+            margin: 0px 0px 12px 0px;
+        }
         &:after {
             content: "";
             position: absolute;
             left: 50%;
-            transform: translateX(-50%);
-            top: 26px;
-            width: 70%;
+            top: -17px;
+            width: 83px;
             height: 1px;
             background-color: #f57365;
+            transform: translateX(-50%);
+
+            @media (min-width: 767px) {
+                top: -13px;
+            }
         }
     }
 
